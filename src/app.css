@@ -1,0 +1,138 @@
+.field {
+  border: 0;
+  background-color: #F5F5F5;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: #00a3af;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  height: 2rem;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    stroke: white;
+    stroke-width: 2px;
+  }
+}
+
+.button:hover {
+  background-color: #008899;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.success {
+  color: white;
+  background-color: #aacf53;
+}
+
+.success:hover {
+  color: white;
+  background-color: #8fae46;
+}
+
+.disabled {
+  color: white;
+  cursor: unset;
+  background-color: #757575;
+}
+
+.disabled:hover {
+  color: white;
+  background-color: #757575;
+}
+
+.warn {
+  color: white;
+  background-color: #ec6800;
+}
+
+.warn:hover {
+  color: white;
+  background-color: #cc5800;
+}
+
+.danger {
+  color: white;
+  background-color: #d9333f;
+}
+
+.danger:hover {
+  color: white;
+  background-color: #ff424f;
+}
+
+.normal {
+  color: #757575;
+  background-color: #F5F5F5;
+
+  svg {
+    stroke: #757575;
+  }
+}
+
+.normal:hover {
+  color: white;
+  background-color: #757575;
+
+  svg {
+    stroke: white;
+  }
+}
+
+.actions {
+  display: flex;
+  
+  .left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-width: 0;
+
+    >* {
+      min-width: 0;
+      margin-right: 1rem;
+    }
+  }
+
+  .right {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+
+    >* {
+      min-width: 0;
+    }
+
+    >*:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.red-dot {
+  position: relative;
+}
+
+.red-dot::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #d9333f;
+  border-radius: 50%;
+}
