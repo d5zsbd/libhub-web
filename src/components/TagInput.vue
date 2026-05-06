@@ -25,10 +25,11 @@ const emit = defineEmits(['update:modelValue']);
 
 const tag = ref("");
 
-const enter = (e: Event) => {
-  const target = e.target as HTMLInputElement;
-  if (target.value !== '') emit('update:modelValue', props.modelValue.concat([target.value.trim()]));
+const enter = () => {
+  const value = tag.value;
   tag.value = '';
+  if (props.modelValue.includes(value)) return;
+  if (value !== '') emit('update:modelValue', props.modelValue.concat([value.trim()]));
 }
 
 const close = (tag: string) => {
